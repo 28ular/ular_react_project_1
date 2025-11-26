@@ -1,0 +1,37 @@
+
+.list {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.nav  {*/
+/*    background: #000;*/
+/*    display: flex;*/
+/*    text-align: center      ;*/
+/*}*/
+.header {
+    position: fixed;   /* фиксируем сверху */
+    top: 0;            /* прижимаем к верхнему краю */
+    left: 0;
+    width: 100%;       /* на всю ширину */
+    height: 60px;      /* фиксированная высота хедера */
+    background: #000;  /* фон, чтобы не просвечивал */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;     /* чтобы был поверх всего */
+    border-bottom: 1px solid #333; /* можно убрать */
+}
+.avat {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+

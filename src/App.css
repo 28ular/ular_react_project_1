@@ -1,0 +1,46 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+ }
+
+.logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50% ;
+    background: white;
+}
+.card {
+    padding: 2em;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid aqua;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.detal{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 3px solid aqua;
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.detal:hover{
+    border: 5px solid aqua;
+    transform: translateY(-20px);
+    box-shadow: 10px 10px 100px 10px #646cffaa;
+}
