@@ -22,8 +22,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;     /* чтобы был поверх всего */
-    border-bottom: 1px solid #333; /* можно убрать */
+    z-index: 1000;
+    border-bottom: 1px solid #333;
 }
 .avat {
     width: 35px;

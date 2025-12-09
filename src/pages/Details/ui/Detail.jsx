@@ -1,5 +1,6 @@
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+
 export const Details = () => {
 
     const navigate = useNavigate();
@@ -19,9 +20,6 @@ export const Details = () => {
 
         d()
     }, [id])
-
-
-
 
 
     return (

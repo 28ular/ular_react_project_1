@@ -11,6 +11,7 @@ export const MainLIst = () => {
     useEffect(() => {
         getUsers()
     },[])
+
     console.log(users)
     if (loading) return <p>LOADING......</p>
     return(
