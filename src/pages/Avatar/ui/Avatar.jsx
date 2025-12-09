@@ -1,13 +1,18 @@
 import {useAvatar} from "../../../store/avatar.js";
 import './avatar.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 export const Avatar = () => {
 
     const {Name , Age , Telegram , setUser , custom , toggleForm , AvatarUrl , changeAvatarurl  , avatarClass , toggleAvatarForm} = useAvatar()
 
+    useEffect(()=>{
+        AOS.init({duration: 800})
+    }, [])
 
 
     const [name , setName] = useState("")
@@ -56,13 +61,13 @@ export const Avatar = () => {
             <ToastContainer/>
 
             <div className="logo_avat_item">
-                <div className="logos_avatar" style={{backgroundImage: `url(${AvatarUrl.url})` ,}}>
+                <div className="logos_avatar" style={{backgroundImage: `url(${AvatarUrl.url})`}}>
                     <span className='ref' onClick={() => toggleAvatarForm() }>{
                         avatarClass === 'editAvatar_form_notActive' ? 'avatar' : 'close'
                     }</span>
                 </div>
 
-                <div className={avatarClass}>
+                <div className={avatarClass} >
                     <input
                         type="text"
                         value={avatar}
@@ -71,8 +76,8 @@ export const Avatar = () => {
                     />
                     <button onClick={() => changeAvatar()}>save</button>
                 </div>
-                <div className="container_logo">
-                    <div className="info_avatar">
+                <div className="container_logo" style={{marginTop:'10px'}}>
+                    <div className="info_avatar" data-aos='fade-up'>
                         <button onClick={() => toggleForm()} className="edits_btn">
                             {custom === 'edit_form_notactive' ? 'edit' : '❌'}
                         </button>

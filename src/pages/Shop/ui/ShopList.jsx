@@ -1,11 +1,15 @@
+import dataShop from '../db/shop.json'
+import {Shop} from "./Shop.jsx";
+
+
 export const ShopList = () => {
 
     return (
+        <>
 
-        <div>
-            ghbdtn rfr ent, ltkf ff yjhvfkmyj utybfkmyj dtyjvtfmyjk gtqgtq
-        </div>
-
-
+            <div className="shopList">{
+                dataShop.products.map((s) => <Shop s={s} key={s.id}/>)
+            }</div>
+        </>
     );
 }

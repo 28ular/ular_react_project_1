@@ -27,7 +27,7 @@ export const useAvatar = create(
             url: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
         },
         changeAvatarurl: (setUrl) => set((s) => ({
-            AvatarUrl: {...s.AvatarUrl , url: setUrl}
+            AvatarUrl: {...s.AvatarUrl , url: setUrl }
         })),
 
         avatarClass: 'editAvatar_form_notActive',

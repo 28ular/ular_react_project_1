@@ -6,6 +6,8 @@ import {Details} from "../pages/Details/ui/Detail.jsx";
 import {About} from "../pages/About/ui/About.jsx";
 import {ShopList} from "../pages/Shop/ui/ShopList.jsx";
 import {Avatar} from "../pages/Avatar/ui/Avatar.jsx";
+import {ShopDetail} from "../pages/Shop/ui/ShopDetail.jsx";
+import {NotFound} from "./NotFound.jsx";
 
 export const router  = createBrowserRouter([{
     element: <Layout/>,
@@ -16,8 +18,8 @@ export const router  = createBrowserRouter([{
         {path:'main/:id' , element: <Details/>},
         {path:'about' , element: <About/>},
         {path:'shop' , element: <ShopList/>},
-        {path:"*" , element: <h2>NotFound 404</h2>},
+        {path:'shop/:id' , element: <ShopDetail/>},
+        {path:"*" , element: <NotFound/> },
         {path: 'avatar' , element: <Avatar/>},
-        
     ]
 }])
